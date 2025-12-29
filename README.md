@@ -1,50 +1,24 @@
-<p align="center">
-  <img src="https://img.icons8.com/color/48/000000/source-code.png"/>
+<h1>Hi, I'm Anns <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzBmYzg4ZDNhOGE3YzYzZTU3OWQ4ZjQwYjQwYTJjYjBjZjQwYjQwYiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/WUlplcMpOCEmTGBtBW/giphy.gif" width="35px"></h1>
+
+**Full-Stack Software Engineer**  building scalable, production-grade systems.
+
+I currently work at **[Algotix AI](https://www.algotix.ai/)**, where I build and scale web and mobile applications with a strong focus on **cloud infrastructure and AI-driven platforms**. Previously, I worked as a **Full-Stack Developer** at **[Rehman Solutions](https://www.rahmansolutions.com/)**, leading and contributing to **real-time systems**.
+
+I enjoy solving complex engineering problems and building systems that scale.  
+Outside of work, I explore new technologies, refine system architectures, play football, and enjoy battle games.
+
+---
+
+### 🔗 Connect with me <img src="https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif" width="40px">
+<p align="left">
+  <a href="https://annsabbasi.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-0A192F?style=for-the-badge&logo=vercel&logoColor=white" />
+    <!-- <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /> -->
+  </a>
+  <a href="https://www.linkedin.com/in/annsabbasi54/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://www.instagram.com/annsabbasi54/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+  </a>
 </p>
-
-<h1 align="center">
-  annsabbasi.dev – v1
-</h1>
-
-<p align="center">
-  The first iteration of my personal portfolio website, built with React.js and
-  Material UI to showcase my experience, projects, and technical skill set as a
-  full-stack software engineer.
-</p>
-
-
-## 🛠 set-up
-
-1. Install the dependencies
-
-   ```sh
-   npm install or yarn
-   ```
-
-2. Start the development server
-
-   ```sh
-   yarn run start
-   ```
-
-## 🚀 build and run for production
-
-1. Generate a full static production build
-
-   ```sh
-   npm run build
-   ```
-
-
-## 🎨 color codes
-
-| Color          | Hex                                                                |
-| -------------- | ------------------------------------------------------------------ |
-| Navy           | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) `#0a192f` |
-| Light Navy     | ![#112240](https://via.placeholder.com/10/0a192f?text=+) `#112240` |
-| Lightest Navy  | ![#233554](https://via.placeholder.com/10/303C55?text=+) `#233554` |
-| Slate          | ![#8892b0](https://via.placeholder.com/10/8892b0?text=+) `#8892b0` |
-| Light Slate    | ![#a8b2d1](https://via.placeholder.com/10/a8b2d1?text=+) `#a8b2d1` |
-| Lightest Slate | ![#ccd6f6](https://via.placeholder.com/10/ccd6f6?text=+) `#ccd6f6` |
-| White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
-| Green          | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` |
