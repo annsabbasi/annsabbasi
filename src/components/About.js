@@ -19,30 +19,34 @@ class About extends React.Component {
   render() {
     const one = (
       <p>
-        I am currently a <b>Software Engineer</b> at
-        <a href="https://www.ads.google.com/"> Google</a>, where I help build
-        autobidder models that make Google Search money. Previously, I was at
-        <a href="https://www.aboutamazon.com/"> Amazon</a> and{" "}
-        <a href="https://newsroom.pinterest.com/company/"> Pinterest.</a> At the
-        same time, I am undertaking a part-time <b> Master's of Science</b> in{" "}
-        <b>Software Engineering </b>at{" "}
-        <a href="https://www.ox.ac.uk/about">University of Oxford</a>.
-      </p>
+        I am currently a <b>Software Engineer</b> at{" "}
+        <a href="https://www.algotix.ai/" target="_blank" rel="noreferrer">
+          Algotix AI
+        </a>
+        , where I work on building and scaling production-grade web and mobile
+        applications with a strong focus on cloud infrastructure, and AI-driven platforms.
+        Previously, I worked as a <b>Full-Stack Developer</b> at{" "}
+        <a href="https://www.rahmansolutions.com/" target="_blank" rel="noreferrer">
+          Rehman Solutions
+        </a>
+        , leading and contributing to real-time systems.</p>
     );
     const two = (
       <p>
-        Outside of work, I’m nerdy about tech gadgets, love literary fiction,
-        and play way too many battle royale games. Oh, I make content too.
+        Outside of work, I enjoy exploring new technologies or refining system
+        architectures. Oh, I also
+        play football and enjoy battle games.
       </p>
     );
+
 
     const tech_stack = [
       "Python",
       "Typescript",
       "React.js",
-      "Java",
+      "Node Js",
       "Javascript ES6+",
-      "C#",
+      "Cloud",
     ];
 
     return (
@@ -67,7 +71,7 @@ class About extends React.Component {
               {[two]}
             </div>
             <div className="about-image">
-              <img alt="Gazi Jarin" src={"/assets/me2.jpg"} />
+              <img alt="annsabbasi" src={"/1.png"} />
             </div>
           </div>
         </FadeInSection>

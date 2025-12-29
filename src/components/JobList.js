@@ -82,71 +82,27 @@ const JobList = () => {
   const [value, setValue] = React.useState(0);
 
   const experienceItems = {
-    Google: {
+    "Algotix AI": {
       jobTitle: "Software Engineer @",
-      duration: "JAN 2025 - PRESENT",
+      duration: "FEB 2025 - PRESENT",
       desc: [
-        "Built and launched large-scale machine learning-driven conversion autobidding models at Google scale, influencing bidding decisions across millions of advertisers and users",
-        "Led end-to-end model development (data, training, evaluation, and production launch) for Proxybidder ML systems, directly driving multi-million-dollar revenue impact through improved conversion efficiency",
+        "Architected and deployed scalable AWS infrastructure using EC2, S3, RDS, and CloudWatch monitoring, ensuring 99.9% uptime for production applications handling 10,000+ daily active users.",
+        "Optimized backend services and database queries, achieving 15% performance improvement and reducing average API response time from 800ms to 680ms.",
+        "Reduced deployment cycle time by 30% through implementation of Docker containerization and GitHub Actions CI/CD pipelines, enabling 3x faster feature releases.",
+        "Developed cross-platform mobile applications using React Native with offline-first architecture, improving user retention by 22%.",
       ],
     },
-    Pinterest: {
-      jobTitle: "Software Engineer II @",
-      duration: "JUL 2022 - JAN 2025",
+    "Rehman Solutions": {
+      jobTitle: "Full Stack Developer @",
+      duration: "SEPT 2023 - FEB 2025",
       desc: [
-        "Led the development of a generative AI solution using LLMs for advanced prompt engineering, improving SEO and ad relevance, and resulting in a 20% increase in click-through rates, ad revenue and business visibility",
-        "Designed and developed an intuitive user interface for a prompt management system for 500K+ users, with key focus on accessibility, real-time collaboration features, and dynamic data visualization",
+        "Led a cross-functional team of 5 developers, implementing agile practices that increased sprint velocity by 40% and improved on-time delivery from 65% to 92%.",
+        "Built production-grade mobile applications with real-time synchronization using Socket.IO and local-first architecture, enabling offline functionality and reducing data sync conflicts by 85%.",
+        "Optimized Google Cloud Run functions and API architecture, improving response times by 25% while reducing monthly cloud costs by 20% through efficient resource utilization and caching strategies.",
+        "Assigned primary responsibility for code reviews across full-stack applications, identifying critical issues and ensuring code quality standards before production deployments.",
+        "Resolved complex bugs and performance bottlenecks in both frontend (React.js, React Native) and backend (Node.js, Nest.js) codebases, optimizing algorithms and refactoring legacy code to improve application stability.",
       ],
     },
-    Amazon: {
-      jobTitle: "Software Development Engineer II @",
-      duration: "JUL 2022 - MAY 2024",
-      desc: [
-        "Led development of end-to-end region build automation across Route 53 (AWS's DNS web service).  This enabled the launch of customer-facing global services in new regions within a day, a significant reduction from the previous time-frame of a month.",
-        "Re-built Route 53's core domain management and DNS systems to provide a better user experience to millions of customers.",
-      ],
-    },
-    Wattpad: {
-      jobTitle: "Software Engineer Intern @",
-      duration: "MAY 2020 - APR 2021",
-      desc: [
-        "Developed a responsive React web page (the new Story Details) from scratch, both on client and server side, for an app with massive scale (2 billion daily requests).",
-        "Iteratively built web experiences for 80 million users across high-traffic pages.",
-        "Collaborated with senior engineers and product management following best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations.",
-      ],
-    },
-    // "University of Toronto": {
-    //   jobTitle: "Research Engineer @",
-    //   duration: "MAY 2021 - SEPT 2021",
-    //   desc: [
-    //     "Developed and researched an NLP-based framework using state-of-the-art tools like Spacy and Stanza to facilitate the derivation of requirements from health data by leveraging syntactic dependencies, entity-recognition and rule-based match-making.",
-    //     " Application selected for DCS Research Award ($4,000) as part of the ”Visualizing Privacy Analysis Results” project led by Professor Marsha Chechik."
-    //   ]
-    // },
-    // Centivizer: {
-    //   jobTitle: "Software Developer @",
-    //   duration: "SEPT 2019 - APR 2020",
-    //   desc: [
-    //     "Developed interactive and neural-activation technologies to stimulate physical and cognitive functions in order to slow the progression of neurodegenerative disorders.",
-    //     "Leveraged WebRTC to develop and maintain a Node.js online video-streaming platform in real-time competitive-mode games to research the effects of active stimulation for those suffering from dementia."
-    //   ]
-    // },
-    // TDSB: {
-    //   jobTitle: "Software Engineer @",
-    //   duration: "SEPT 2019 - DEC 2020",
-    //   desc: [
-    //     "Co-developed homework management software integrable with Google Classroom by utilizing the Python’s Flask micro-framework for the back-end API and Vue.js for the front-end UI, in order to translate business requirements into a functional full-stack application."
-    //   ]
-    // },
-    // "Orange Gate": {
-    //   jobTitle: "Software Developer Intern @",
-    //   duration: "MAY 2019 - AUG 2019",
-    //   desc: [
-    //     "Developed a Node.js smart home system through Facebook’s Messenger integrated with Bocco sensors and other smart devices (Nest camera, TPLink smart plugs) to derive conclusions about the current state of the home",
-    //     "Identified continuous improvements in data quality, design reports and coding activities, presenting results and findings to internal business stakeholders.",
-    //     "Relevant technologies/tools used: DialogFlow, Vision, AutoML, Messenger Bot API, MongoDB."
-    //   ]
-    // }
   };
 
   const handleChange = (event, newValue) => {
@@ -163,11 +119,11 @@ const JobList = () => {
         className={classes.tabs}
       >
         {Object.keys(experienceItems).map((key, i) => (
-          <Tab label={isHorizontal ? `0${i}.` : key} {...a11yProps(i)} />
+          <Tab label={isHorizontal ? `0${i}.` : key} {...a11yProps(i)} key={i} />
         ))}
       </Tabs>
       {Object.keys(experienceItems).map((key, i) => (
-        <TabPanel value={value} index={i}>
+        <TabPanel value={value} index={i} key={i}>
           <span className="joblist-job-title">
             {experienceItems[key]["jobTitle"] + " "}
           </span>
@@ -178,8 +134,8 @@ const JobList = () => {
           <ul className="job-description">
             {experienceItems[key]["desc"].map(function (descItem, i) {
               return (
-                <FadeInSection delay={`${i + 1}00ms`}>
-                  <li key={i}>{descItem}</li>
+                <FadeInSection delay={`${i + 1}00ms`} key={i}>
+                  <li>{descItem}</li>
                 </FadeInSection>
               );
             })}

@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Projects.css";
 import FolderOpenRoundedIcon from "@material-ui/icons/FolderOpenRounded";
 import FadeInSection from "./FadeInSection";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from "react-bootstrap/Carousel";
 import ExternalLinks from "./ExternalLinks";
 
@@ -22,85 +22,78 @@ class Projects extends React.Component {
   }
   render() {
     const spotlightProjects = {
-      "No Man's Land": {
-        title: "no man's land",
+      Midday: {
+        title: "midday",
         desc:
-          "A third-person survival-mode game where you battle against time and space to return to Earth.",
-        techStack: "C# (UNITY)",
-        link: "https://github.com/slakh96/no-mans-land",
-        open: "https://gazijarin.itch.io/no-mans-land",
-        image: "/assets/nomansland.png",
+          "Forked and customized AI-powered business assistant platform for enterprise client. Managed complete deployment pipeline using Docker, Vercel, and Fly.io with tRPC and Drizzle ORM.",
+        techStack: "NEXT.JS, TRPC, DRIZZLE ORM, DOCKER",
+        link: "https://github.com/annsabbasi/Midday",
+        open: "https://midday.ai",
+        image: "/assets/midday.png",
       },
-      // Truth: {
-      //   title: "truth",
-      //   desc:
-      //     "A three.js simulation of the planet system revolving around a monolith.",
-      //   techStack: "JAVASCRIPT (THREE.JS)",
-      //   link: "https://github.com/gazijarin/truth",
-      //   open: "https://gazijarin.github.io/Truth/",
-      //   image: "/assets/truth.png"
-      // },
-      "Tall Tales": {
-        title: "tall tales",
+      TechTren: {
+        title: "techtren",
         desc:
-          "A multi-player story-telling web game for 3-5 players. Its usage of sockets to allow for concurrent gameplay, connecting friends across the internet.",
-        techStack: "NODE.JS (SOCKET.IO), REACT.JS, MONGODB",
-        link: "https://github.com/gazijarin/TallTales",
-        open: "https://talltales.herokuapp.com/",
-        image: "/assets/talltales.png",
+          "AI-powered financial assistant and investment platform with predictive pricing modules, OAuth trading integration, and real-time interactive charts for stock analysis.",
+        techStack: "NEXT.JS, NODE.JS, AWS, OPENAI API",
+        link: "https://github.com/annsabbasi",
+        open: "https://www.techtren.com",
+        image: "/assets/techtren.png",
       },
-      Portfolio: {
-        title: "portfolio.js",
+      FrontDeskPro: {
+        title: "frontdeskpro",
         desc:
-          "A small JS library that helps with clear and succinct data presentation.",
-        techStack: "NODE.JS (EXPRESS.JS)",
-        link: "https://github.com/gazijarin/Portfolio.js",
-        open: "https://afternoon-ocean-92382.herokuapp.com/",
-        image: "/assets/portfolio.png",
+          "Voice-enabled AI agent system integrating ElevenLabs, Twilio, Deepgram, and OpenAI. Processes 500+ calls daily with 90% intent recognition accuracy.",
+        techStack: "NEST.JS, NEXT.JS, POSTGRESQL, AWS EC2",
+        link: "https://github.com/annsabbasi",
+        open: "https://frontdeskpro.ai",
+        image: "/assets/frontdeskpro.png",
       },
     };
+
     const projects = {
-      "TDSB Homework Management Interface": {
+      "TechTren": {
         desc:
-          "An application created for Toronto District School Board, with a Flask back-end and a Vue front-end.",
-        techStack: "Python (Flask), Vue.js, Bootstrap, SQL",
-        link: "https://github.com/gazijarin/TDSBHomeworkManagement",
-        open: "https://tdsb-app.herokuapp.com/",
+          "An AI-powered financial assistant platform enabling portfolio tracking, predictive pricing, and real-time market insights.",
+        techStack:
+          "Next.js, Node.js, PostgreSQL, WebSockets, OAuth, Financial APIs",
+        link: "https://www.techtren.com",
+        open: "https://www.techtren.com",
       },
-      "Adam A.I.": {
+      "Relay Towing": {
         desc:
-          "A self-learning A.I. that learns to traverse through a complex maze using the genetic algorithm.",
-        techStack: "Javascript, HTML / CSS",
-        link: "https://github.com/gazijarin/adamai",
-        open: "https://gazijarin.github.io/AdamAI/",
+          "Comprehensive dispatch and operations management system with real-time GPS tracking using Socket.IO and Google Maps API.",
+        techStack: "Nest.js, Next.js, Supabase, Auth0, Socket.IO",
+        link: "https://github.com/annsabbasi/relay_towing",
+        open: "https://app.relaytow.com",
       },
-      "Distributed Logging and Monitoring System": {
+      "TryLeo": {
         desc:
-          "A system that establishes an ORM connection to a Prisma client in order to communicate logs from microservices.",
-        techStack: "Node.js (Express.js), React.js, PostgreSQL",
-        link:
-          "https://github.com/gazijarin/Distributed-Logging-and-Monitoring-System",
+          "Intelligent platform converting handwritten historical records into searchable digital formats using advanced OCR and NLP.",
+        techStack: "Next.js, Python, OpenAI API, Redis, BullMQ",
+        link: "https://github.com/annsabbasi",
+        open: "http://tryleo.ai",
       },
-      "Odin Bot": {
+      "Midday (Open Source Customization)": {
         desc:
-          "A Telegram bot that helps you excel on your daily tasks through Node NLP.",
-        techStack: "Javascript, Node.js, Natural NLP, Telegram API",
-        link: "https://github.com/gazijarin/OdinBot",
-        open: "",
+          "Customized an open-source AI-powered business assistant by adapting its monorepo architecture and deploying production-ready services.",
+        techStack: "Next.js, tRPC, Drizzle ORM, Docker, Fly.io, Vercel",
+        link: "https://midday.ai",
+        open: "https://midday.ai",
       },
-      "Game Centre": {
+      "CatchACharacter": {
         desc:
-          "An Android app consisting of three board games, including multiplayer, autosave, user authentication, etc.",
-        techStack: "Java, Android Studio",
-        link: "https://github.com/gazijarin/gamecentre",
-        open: "",
+          "Augmented reality photo & stickers application with advanced image overlay and editing features. Achieved 100K+ downloads on Play Store.",
+        techStack: "React Native, AR Libraries, Image Processing",
+        link: "https://github.com/annsabbasi",
+        open: "https://play.google.com/store/apps/details?id=com.catchacharacter.android",
       },
-      "Minimax Stonehenge": {
+      "Ballina Killaloe Radio": {
         desc:
-          "Two-player, zero-sum game with a strategic Minimax artificial intelligence.",
-        techStack: "Python",
-        link: "https://github.com/gazijarin/stonehenge",
-        open: "",
+          "Ireland-based radio streaming application with integrated user recommendation engine and local event update system.",
+        techStack: "React Native, Audio Streaming APIs",
+        link: "https://github.com/annsabbasi",
+        open: "https://play.google.com/store/apps/details?id=com.ballina_killaloe_radio_app&hl=en",
       },
     };
 
@@ -111,11 +104,12 @@ class Projects extends React.Component {
         </div>
         <Carousel>
           {Object.keys(spotlightProjects).map((key, i) => (
-            <Carousel.Item>
+            <Carousel.Item key={i}>
               <img
                 className="d-block w-100"
                 src={spotlightProjects[key]["image"]}
                 alt={key}
+              // style={{ objectFit: "cover", border: '2px solid red' }}
               />
               <div className="caption-bg">
                 <Carousel.Caption>
@@ -138,7 +132,7 @@ class Projects extends React.Component {
         <div className="project-container">
           <ul className="projects-grid">
             {Object.keys(projects).map((key, i) => (
-              <FadeInSection delay={`${i + 1}00ms`}>
+              <FadeInSection delay={`${i + 1}00ms`} key={i}>
                 <li className="projects-card">
                   <div className="card-header">
                     <div className="folder-icon">
