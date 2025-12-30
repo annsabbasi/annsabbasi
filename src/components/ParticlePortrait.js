@@ -39,10 +39,8 @@ const ParticlePortrait = () => {
     let animationId;
 
     // Refined professional color palette
-    // Smoother gradient from deep navy shadows to vibrant teal highlights
     const getThemeColor = (brightness) => {
       if (brightness < 0.2) {
-        // Deep shadows - rich navy blue with hint of teal
         const t = brightness / 0.2;
         return {
           r: Math.round(20 + (45 - 20) * t),
@@ -50,7 +48,6 @@ const ParticlePortrait = () => {
           b: Math.round(65 + (95 - 65) * t),
         };
       } else if (brightness < 0.4) {
-        // Dark mid-tones - muted teal-gray
         const t = (brightness - 0.2) / 0.2;
         return {
           r: Math.round(45 + (70 - 45) * t),
@@ -58,7 +55,6 @@ const ParticlePortrait = () => {
           b: Math.round(95 + (140 - 95) * t),
         };
       } else if (brightness < 0.6) {
-        // Mid-tones - soft cyan-slate
         const t = (brightness - 0.4) / 0.2;
         return {
           r: Math.round(70 + (90 - 70) * t),
@@ -66,7 +62,6 @@ const ParticlePortrait = () => {
           b: Math.round(140 + (180 - 140) * t),
         };
       } else if (brightness < 0.8) {
-        // Light areas - bright cyan moving toward teal
         const t = (brightness - 0.6) / 0.2;
         return {
           r: Math.round(90 + (100 - 90) * t),
@@ -74,7 +69,6 @@ const ParticlePortrait = () => {
           b: Math.round(180 + (210 - 180) * t),
         };
       } else {
-        // Highlights - vibrant teal accent
         const t = (brightness - 0.8) / 0.2;
         return {
           r: Math.round(100 + (100 - 100) * t),
@@ -86,9 +80,7 @@ const ParticlePortrait = () => {
 
     const img = new Image();
     img.crossOrigin = "Anonymous";
-    img.src = "/profile.jpeg";
-    // img.src = "/anns.png";
-    // img.src = "/anns3.png";
+    img.src = "/anns.png";
 
     img.onload = () => {
       const offscreen = document.createElement("canvas");
@@ -115,6 +107,7 @@ const ParticlePortrait = () => {
       const pixels = imageData.data;
 
       const particles = [];
+      // Keep original density for image quality
       const particleGap = size <= 280 ? 2 : size <= 350 ? 2.5 : 3;
 
       for (let y = 0; y < canvasHeight; y += particleGap) {
@@ -133,7 +126,8 @@ const ParticlePortrait = () => {
               ? 0.6 + brightness * 0.8
               : 0.8 + brightness * 1.0;
 
-            const scatterRadius = 350;
+            // Smaller scatter for faster assembly
+            const scatterRadius = 200;
             const angle = Math.random() * Math.PI * 2;
             const distance = Math.random() * scatterRadius;
             const scatterX = Math.cos(angle) * distance;
@@ -155,7 +149,8 @@ const ParticlePortrait = () => {
               a: a,
               baseAlpha: (a / 255) * (0.9 + brightness * 0.1),
               currentAlpha: 0,
-              delay: Math.random() * 0.4,
+              // Faster start
+              delay: Math.random() * 0.2,
               brightness: brightness,
             });
           }
@@ -173,7 +168,7 @@ const ParticlePortrait = () => {
       ctx.font = "14px Arial";
       ctx.textAlign = "center";
       ctx.fillText("Image not found", canvasWidth / 2, canvasHeight / 2 - 10);
-      ctx.fillText("Place 'anns.png' in public folder", canvasWidth / 2, canvasHeight / 2 + 15);
+      ctx.fillText("Place 'profile.jpeg' in public folder", canvasWidth / 2, canvasHeight / 2 + 15);
     };
 
     const draw = () => {
@@ -194,21 +189,24 @@ const ParticlePortrait = () => {
 
         if (particleTime < 0) return;
 
-        const fadeProgress = Math.min(particleTime / 1.8, 1);
-        const easedFade = 1 - Math.pow(1 - fadeProgress, 3);
+        // Faster fade in
+        const fadeProgress = Math.min(particleTime / 1.0, 1);
+        const easedFade = 1 - Math.pow(1 - fadeProgress, 2);
         p.currentAlpha = p.baseAlpha * easedFade;
 
-        const moveProgress = Math.min(particleTime / 2.5, 1);
-        const easedMove = 1 - Math.pow(1 - moveProgress, 4);
+        // Faster settle
+        const moveProgress = Math.min(particleTime / 1.5, 1);
+        const easedMove = 1 - Math.pow(1 - moveProgress, 3);
 
+        // BIGGER + SMOOTHER + FASTER hover effect
         if (mouse.active) {
           const dx = p.x - mouse.x;
           const dy = p.y - mouse.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          const maxDist = 60;
+          const maxDist = 100; // Bigger radius (was 60)
 
           if (dist < maxDist && dist > 0) {
-            const force = (1 - dist / maxDist) * 2.5;
+            const force = (1 - dist / maxDist) * 4; // Stronger push (was 2.5)
             p.vx += (dx / dist) * force;
             p.vy += (dy / dist) * force;
           }
@@ -217,12 +215,14 @@ const ParticlePortrait = () => {
         const dx = p.targetX - p.x;
         const dy = p.targetY - p.y;
 
-        const pullStrength = 0.015 + easedMove * 0.1;
+        // Stronger pull for snappier return
+        const pullStrength = 0.025 + easedMove * 0.15;
         p.vx += dx * pullStrength;
         p.vy += dy * pullStrength;
 
-        p.vx *= 0.88;
-        p.vy *= 0.88;
+        // Smoother damping
+        p.vx *= 0.85;
+        p.vy *= 0.85;
 
         p.x += p.vx;
         p.y += p.vy;
