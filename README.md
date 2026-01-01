@@ -7,7 +7,7 @@ I currently work as a software engineer at **[Algotix AI](https://www.algotix.ai
 I enjoy solving complex engineering problems and building systems that scale.  
 Outside of work, I explore new technologies, refine system architectures, play football, and enjoy battle games.
 
----
+<!-- --- -->
 
 ### 🔗 Connect with me <img src="https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif" width="40px">
 <p align="left">
