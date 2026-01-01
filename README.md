@@ -11,7 +11,7 @@ Outside of work, I explore new technologies, refine system architectures, play f
 
 ### 🔗 Connect with me <img src="https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif" width="40px">
 <p align="left">
-  <a href="https://www.linkedin.com/in/annsabbasi54/" target="_blank">
+  <a href="https://www.linkedin.com/in/annsabbasi" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
  <a href="https://res.cloudinary.com/dbzbetuin/image/upload/v1767270739/jkhfquzzvza6ik0igmhb.pdf" target="_blank">
