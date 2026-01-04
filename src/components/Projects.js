@@ -31,15 +31,15 @@ class Projects extends React.Component {
         open: "https://midday.ai",
         image: "/assets/midday.png",
       },
-      // TechTren: {
-      //   title: "techtren",
-      //   desc:
-      //     "AI-powered financial assistant and investment platform with predictive pricing modules, OAuth trading integration, and real-time interactive charts for stock analysis.",
-      //   techStack: "NEXT.JS, NODE.JS, AWS, OPENAI API",
-      //   link: "https://github.com/annsabbasi",
-      //   open: "https://www.techtren.com",
-      //   image: "/assets/techtren.png",
-      // },
+      TechTren: {
+        title: "techtren",
+        desc:
+          "AI-powered financial assistant and investment platform with predictive pricing modules, OAuth trading integration, and real-time interactive charts for stock analysis.",
+        techStack: "NEXT.JS, NODE.JS, AWS, OPENAI API",
+        link: "https://github.com/annsabbasi",
+        open: "https://www.techtren.com",
+        image: "/assets/techtren.png",
+      },
       FrontDeskPro: {
         title: "frontdeskpro",
         desc:
@@ -52,14 +52,14 @@ class Projects extends React.Component {
     };
 
     const projects = {
-      // "TechTren": {
-      //   desc:
-      //     "An AI-powered financial assistant platform enabling portfolio tracking, predictive pricing, and real-time market insights.",
-      //   techStack:
-      //     "Next.js, Node.js, PostgreSQL, WebSockets, OAuth, Financial APIs",
-      //   link: "https://www.techtren.com",
-      //   open: "https://www.techtren.com",
-      // },
+      "TechTren": {
+        desc:
+          "An AI-powered financial assistant platform enabling portfolio tracking, predictive pricing, and real-time market insights.",
+        techStack:
+          "Next.js, Node.js, PostgreSQL, WebSockets, OAuth, Financial APIs",
+        link: "https://www.techtren.com",
+        open: "https://www.techtren.com",
+      },
       "Relay Towing": {
         desc:
           "Comprehensive dispatch and operations management system with real-time GPS tracking using Socket.IO and Google Maps API.",
