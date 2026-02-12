@@ -13,8 +13,8 @@ Outside of work, I explore new technologies, refine system architectures, play f
   <a href="https://www.linkedin.com/in/annsabbasi" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
- <a href="https://drive.google.com/file/d/11GajD7uRHK5UpPM4LpIjHdGmrAVSYd9v/view?usp=drive_link" target="_blank">
-  <img src="https://img.shields.io/badge/Resume-4285F4?style=for-the-badge&logo=googledocs&logoColor=white" />
+<a href="https://annsabbasi.vercel.app/" target="_blank">
+  <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" />
 </a>
 
 </p>
