@@ -4,10 +4,11 @@ import FadeInSection from "./FadeInSection";
 
 const About = () => {
   const stats = [
-    { number: "3+",   label: "Years of Experience" },
-    { number: "10+",  label: "Production Projects" },
-    { number: "100K+",label: "App Downloads" },
-    { number: "99.9%",label: "Uptime Delivered" },
+    { number: "3+", label: "Years of Experience" },
+    { number: "10+", label: "Production Projects" },
+    // { number: "100K+",label: "App Downloads" },
+    { number: "40%", label: "Sprint Velocity Improved" },
+    { number: "94.5%", label: "On-Time Project Delivery" },
   ];
 
   const skills = [
@@ -33,7 +34,7 @@ const About = () => {
     },
     {
       label: "Desktop & Other",
-      items: ["Electron (Win/Mac/Linux)", "Socket.IO", "WebSockets", "tRPC"],
+      items: ["Electron Js", "Socket.IO", "WebSockets", "tRPC"],
     },
   ];
 
