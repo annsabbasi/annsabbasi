@@ -77,7 +77,7 @@ class Projects extends React.Component {
           "Screen Monitoring",
           "AWS",
         ],
-        github: null,
+        github: "https://github.com/annsabbasi/merit-tracker",
         live: "https://merit-tracker.vercel.app/dashboard",
         images: [
           "/assets/merit-tracker/dashboard.png",

@@ -28,10 +28,10 @@ const NavBar = ({ theme, toggleTheme }) => {
   const closeMenu = () => setMenuOpen(false);
 
   const navLinks = [
-    { label: "About",      href: "#about",      num: "01" },
+    { label: "About", href: "#about", num: "01" },
     { label: "Experience", href: "#experience", num: "02" },
-    { label: "Projects",   href: "#projects",   num: "03" },
-    { label: "Contact",    href: "#contact",    num: "04" },
+    { label: "Projects", href: "#projects", num: "03" },
+    { label: "Contact", href: "#contact", num: "04" },
   ];
 
   return (
@@ -101,7 +101,7 @@ const NavBar = ({ theme, toggleTheme }) => {
 
             <a
               className="nav-resume"
-              href="https://docs.google.com/document/d/1v3XJnyn-tOjq5lwHOhU-ojX9j1snUZ1jxG1RSAkrl84/export?format=pdf"
+              href="https://drive.google.com/file/d/1Xe4-3rhhQqUo1EvucRN7l4nI3imtp2cU/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >

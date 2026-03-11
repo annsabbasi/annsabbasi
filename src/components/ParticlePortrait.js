@@ -11,9 +11,9 @@ const ParticlePortrait = ({ theme = "light" }) => {
   useEffect(() => {
     const updateSize = () => {
       const width = window.innerWidth;
-      if (width <= 480)      setSize(Math.min(260, width - 40));
+      if (width <= 480) setSize(Math.min(260, width - 40));
       else if (width <= 768) setSize(Math.min(320, width - 60));
-      else                   setSize(460);
+      else setSize(460);
     };
     updateSize();
     window.addEventListener("resize", updateSize, { passive: true });
@@ -27,7 +27,7 @@ const ParticlePortrait = ({ theme = "light" }) => {
     const ctx = canvas.getContext("2d");
     const W = size;
     const H = size;
-    canvas.width  = W;
+    canvas.width = W;
     canvas.height = H;
 
     let animationId;
@@ -86,15 +86,16 @@ const ParticlePortrait = ({ theme = "light" }) => {
     /* ── Load image & build particles ── */
     const img = new Image();
     img.crossOrigin = "Anonymous";
+    // img.src = "/anns7.png";
     img.src = "/anns7.png";
 
     img.onload = () => {
       const off = document.createElement("canvas");
       const offCtx = off.getContext("2d");
-      off.width  = W;
+      off.width = W;
       off.height = H;
 
-      const scale  = 0.9;
+      const scale = 0.9;
       const aspect = img.width / img.height;
       let dH = H * scale;
       let dW = dH * aspect;
@@ -115,7 +116,7 @@ const ParticlePortrait = ({ theme = "light" }) => {
           const brightness = (px[i] + px[i + 1] + px[i + 2]) / (3 * 255);
           const col = getThemeColor(brightness);
           const pSize = size <= 260 ? 0.6 + brightness * 0.8 : 0.8 + brightness;
-          const angle    = Math.random() * Math.PI * 2;
+          const angle = Math.random() * Math.PI * 2;
           const distance = Math.random() * 200;
 
           particles.push({
@@ -156,8 +157,8 @@ const ParticlePortrait = ({ theme = "light" }) => {
       if (!imageLoadedRef.current) return;
 
       const particles = particlesRef.current;
-      const mouse     = mouseRef.current;
-      const elapsed   = (performance.now() - startTimeRef.current) / 1000;
+      const mouse = mouseRef.current;
+      const elapsed = (performance.now() - startTimeRef.current) / 1000;
 
       for (const p of particles) {
         const pt = elapsed - p.delay;
@@ -169,8 +170,8 @@ const ParticlePortrait = ({ theme = "light" }) => {
 
         /* Mouse repulsion */
         if (mouse.active) {
-          const dx   = p.x - mouse.x;
-          const dy   = p.y - mouse.y;
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 100 && dist > 0) {
             const f = (1 - dist / 100) * 4;
@@ -184,8 +185,8 @@ const ParticlePortrait = ({ theme = "light" }) => {
         p.vy += (p.targetY - p.y) * pull;
         p.vx *= 0.85;
         p.vy *= 0.85;
-        p.x  += p.vx;
-        p.y  += p.vy;
+        p.x += p.vx;
+        p.y += p.vy;
 
         /* Main particle */
         ctx.beginPath();
@@ -204,15 +205,12 @@ const ParticlePortrait = ({ theme = "light" }) => {
 
       /* Vignette */
       const vg = ctx.createRadialGradient(W / 2, H / 2, W * 0.3, W / 2, H / 2, W * 0.65);
-      const alpha = theme === "dark" ? 0.4 : 0.25;
-      vg.addColorStop(0, `${BG.replace(")", ", 0)").replace("rgb(", "rgba(")}`);
-      // simpler:
       if (theme === "dark") {
         vg.addColorStop(0, "rgba(3, 7, 17, 0)");
-        vg.addColorStop(1, `rgba(3, 7, 17, ${alpha})`);
+        vg.addColorStop(1, "rgba(3, 7, 17, 0.4)");
       } else {
         vg.addColorStop(0, "rgba(248, 250, 252, 0)");
-        vg.addColorStop(1, `rgba(248, 250, 252, ${alpha})`);
+        vg.addColorStop(1, "rgba(248, 250, 252, 0.25)");
       }
       ctx.fillStyle = vg;
       ctx.fillRect(0, 0, W, H);
