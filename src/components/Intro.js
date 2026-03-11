@@ -1,56 +1,92 @@
 import React from "react";
-
 import "../styles/Intro.css";
-import Typist from "react-typist";
-import "react-typist/dist/Typist.css";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import FadeInSection from "./FadeInSection";
 import ParticlePortrait from "./ParticlePortrait";
 
-class Intro extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      expanded: true,
-      activeKey: "1",
-      visible: true,
-    };
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-  handleSelect(eventKey) {
-    this.setState({
-      activeKey: eventKey,
-    });
-  }
-  render() {
-    return (
-      <div id="intro">
-        <div className="intro-simulation">
-          <ParticlePortrait />
-        </div>
-        <div className="intro-block">
-          <Typist avgTypingDelay={120}>
-            <span className="intro-title">
-              {"hi, "}
-              <span className="intro-name">{"annsabbasi"}</span>
-              {" here."}
-            </span>
-          </Typist>
+const Intro = ({ theme }) => {
+  return (
+    <section id="intro">
+      <div className="hero-container">
+        {/* ── Text Content ── */}
+        <div className="hero-content">
           <FadeInSection>
-            <div className="intro-desc">
-              I'm a product-focused software engineer who builds reliable, scalable applications from idea to production.
-              I've worked on real-time platforms, AI automation systems, and cloud-deployed products
-              used by thousands of users in live environments.
+            <div className="hero-badge">
+              <span className="badge-dot" />
+              Available for new opportunities
             </div>
-            <a href="mailto:annsabbasi54@gmail.com?subject=Hello from your portfolio!" className="intro-contact">
-              <EmailRoundedIcon></EmailRoundedIcon>
-              {" Say hi!"}
-            </a>
+
+            <h1 className="hero-name">
+              Anns <span className="gradient-text">Abbasi</span>
+            </h1>
+
+            <p className="hero-role">
+              Senior Software Engineer &amp; AI Systems Builder
+            </p>
+
+            <p className="hero-desc">
+              I design and ship production-grade web, mobile, and AI-driven
+              platforms — from real-time systems to agentic AI pipelines —
+              deployed and trusted by thousands of users in live environments.
+            </p>
+
+            <div className="hero-cta">
+              <a
+                href="mailto:annsabbasi54@gmail.com?subject=Hello from your portfolio!"
+                className="btn-primary"
+              >
+                Get in Touch
+              </a>
+              <a href="#projects" className="btn-outline">
+                View My Work
+              </a>
+            </div>
+
+            <div className="hero-socials">
+              <a
+                className="hero-social-link"
+                href="https://github.com/annsabbasi"
+                target="_blank"
+                rel="noreferrer"
+                title="GitHub"
+              >
+                <GitHubIcon style={{ fontSize: 18 }} />
+              </a>
+              <a
+                className="hero-social-link"
+                href="https://www.linkedin.com/in/annsabbasi/"
+                target="_blank"
+                rel="noreferrer"
+                title="LinkedIn"
+              >
+                <LinkedInIcon style={{ fontSize: 19 }} />
+              </a>
+              <a
+                className="hero-social-link"
+                href="mailto:annsabbasi54@gmail.com"
+                title="Email"
+              >
+                <EmailRoundedIcon style={{ fontSize: 19 }} />
+              </a>
+              <div className="hero-social-divider" />
+              <span className="hero-company-tag">@ Algotix AI</span>
+            </div>
+          </FadeInSection>
+        </div>
+
+        {/* ── Particle Portrait ── */}
+        <div className="hero-visual">
+          <FadeInSection delay="150ms">
+            <div className="hero-particle-wrap">
+              <ParticlePortrait theme={theme} />
+            </div>
           </FadeInSection>
         </div>
       </div>
-    );
-  }
-}
+    </section>
+  );
+};
 
 export default Intro;

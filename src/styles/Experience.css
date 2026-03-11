@@ -1,114 +1,174 @@
+/* ─────────────────────────────────────────
+   EXPERIENCE
+───────────────────────────────────────── */
 #experience {
-  min-height: 90vh;
-  margin: auto;
-  max-width: 1000px;
+  padding: 100px 0 80px;
 }
 
-.joblist-job-title {
-  font-family: "NTR", sans-serif;
-  font-size: 28px;
-  font-weight: bold;
-  color: var(--lightest-slate);
+/* ── MUI overrides (theme-aware via CSS vars) ── */
+.MuiTabs-root {
+  min-width: 180px !important;
 }
 
-.joblist-job-company {
-  font-family: "NTR", sans-serif;
-  font-size: 28px;
-  color: var(--green-bright);
-  font-weight: bold;
+.MuiTab-root {
+  min-width: 180px !important;
+  max-width: 210px !important;
+  padding: 14px 20px !important;
+  text-align: left !important;
+  align-items: flex-start !important;
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--text-3) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  border-radius: 0 !important;
+  border-left: 2px solid var(--border) !important;
+  transition: color 0.15s, background 0.15s !important;
 }
 
-.joblist-duration {
-  font-family: "NTR", sans-serif;
-  font-size: 18px;
-  color: var(--slate);
-}
-
-#vertical-tabpanel {
-  margin-top: -28px;
-  padding-left: 25px;
+.MuiTab-root:hover {
+  color: var(--text-1) !important;
+  background: var(--surface-2) !important;
 }
 
 .MuiTab-wrapper {
-  font-size: 16px;
-  text-align: left;
+  text-align: left !important;
   align-items: flex-start !important;
-  font-family: "NTR", sans-serif;
+  font-family: var(--font) !important;
+  font-size: 14px !important;
 }
 
-.MuiButtonBase-root {
-  outline: none !important;
-  color: var(--lightest-slate) !important;
-}
-
-.PrivateTabIndicator-colorSecondary-5 {
-  background-color: var(--green-bright) !important;
-}
-.jss5 {
-  background-color: var(--green-bright) !important;
-}
-.makeStyles-tabs-2 {
-  border-right: 1px solid var(--lightest-navy) !important;
-}
-#experience .MuiTab-root {
-  padding: 6px 20px;
-}
+/* Active */
+.MuiButtonBase-root.Mui-selected,
 .MuiButtonBase-root:focus {
-  color: var(--green-bright) !important;
+  color: var(--accent) !important;
+  background: var(--green-tint) !important;
 }
 
+/* Indicator line */
+.MuiTabs-indicator,
+.PrivateTabIndicator-root,
+.PrivateTabIndicator-colorSecondary-5,
+.jss5 {
+  background: var(--grad) !important;
+  width: 2px !important;
+  left: 0 !important;
+}
+
+/* Remove default right border */
+.makeStyles-tabs-2,
+[class*="makeStyles-tabs"] {
+  border-right: none !important;
+}
+
+/* Horizontal tabs on mobile */
+.MuiTabs-flexContainer:not(.MuiTabs-flexContainerVertical) .MuiTab-root {
+  border-left: none !important;
+  border-bottom: 2px solid var(--border) !important;
+  min-width: auto !important;
+  flex: 1;
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.MuiTabs-flexContainer:not(.MuiTabs-flexContainerVertical) .MuiButtonBase-root.Mui-selected {
+  border-bottom-color: var(--accent) !important;
+}
+
+/* Tab panel content */
+#vertical-tabpanel {
+  padding-left: 40px !important;
+  margin-top: 0 !important;
+  flex: 1;
+}
+
+.MuiBox-root      { padding: 0 !important; }
+.MuiTypography-root { font-family: var(--font) !important; }
+
+/* ── Job details ── */
+.joblist-job-title {
+  font-family: var(--font);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-1);
+  line-height: 1.3;
+  transition: color 0.22s;
+}
+
+.joblist-job-company {
+  font-family: var(--font);
+  font-size: 22px;
+  font-weight: 700;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: background 0.22s;
+}
+
+.joblist-duration {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-3);
+  margin-top: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.22s;
+}
+
+/* ── Job description bullets ── */
 ul {
   list-style: none;
-  margin-left: -40px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-.job-description li::before {
-  content: "▹    ";
-  color: var(--green-bright);
-  position: absolute;
-  left: 0;
+.job-description {
+  padding-top: 18px;
+  max-width: 620px;
 }
 
 .job-description li {
   position: relative;
-  padding-left: 30px;
-  padding-bottom: 16px;
-  font-size: 18px;
-  color: var(--slate);
+  padding-left: 22px;
+  padding-bottom: 12px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.7;
+  transition: color 0.22s;
 }
 
-.job-description {
-  padding-top: 24px;
-  max-width: 650px;
-  font-family: "NTR", sans-serif;
-  font-size: 20px;
+.job-description li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--accent);
+  font-size: 11px;
+  transition: color 0.22s;
 }
 
-.job-description a,
-.job-description b {
-  font-size: 19px;
-  font-weight: bold;
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  #experience { padding: 80px 0 60px; }
 }
 
-@media only screen and (max-width: 600px) {
-  #experience {
-    min-height: 90vh;
-    overflow-y:auto;
-    padding-left: unset;
-    padding-right: unset;
-  }
-
+@media (max-width: 600px) {
   .makeStyles-root-1 {
     height: unset !important;
-    width: unset;
     flex-direction: column;
   }
-
-  .joblist-job-title {
-    font-size: 22px;
+  #vertical-tabpanel {
+    padding-left: 0 !important;
+    padding-top: 16px !important;
   }
-
-  .joblist-job-company {
-    font-size: 22px;
-  }
+  .joblist-job-title,
+  .joblist-job-company { font-size: 18px; }
+  .job-description li  { font-size: 14px; }
 }

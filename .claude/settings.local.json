@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.google.com)",
+      "WebFetch(domain:jolt-frontend-khaki.vercel.app)",
+      "WebFetch(domain:www.algotix.ai)",
+      "WebFetch(domain:www.rahmansolutions.com)",
+      "Bash(cd \"C:\\\\Users\\\\annsa\\\\OneDrive\\\\Desktop\\\\personal\" && node -e \"const fs=require\\('fs'\\); ['src/App.js','src/components/NavBar.js','src/components/Intro.js','src/components/About.js','src/components/Credits.js'].forEach\\(f => { try { fs.readFileSync\\(f\\); console.log\\('OK:', f\\); } catch\\(e\\) { console.log\\('MISSING:', f\\); } }\\)\")",
+      "Bash(cd \"C:\\\\Users\\\\annsa\\\\OneDrive\\\\Desktop\\\\personal\" && node -e \"\nconst fs = require\\('fs'\\);\nconst files = [\n  'src/App.js',\n  'src/index.css',\n  'src/styles/Global.css',\n  'src/styles/NavBar.css',\n  'src/components/NavBar.js',\n  'src/components/Intro.js',\n  'src/components/ParticlePortrait.js',\n  'src/styles/About.css',\n  'src/styles/Experience.css',\n  'src/styles/Projects.css',\n  'src/styles/Credits.css',\n  'public/index.html'\n];\nfiles.forEach\\(f => {\n  const size = fs.statSync\\(f\\).size;\n  console.log\\(\\(size > 100 ? '✓' : '✗'\\) + ' ' + f + ' \\(' + size + 'B\\)'\\);\n}\\);\n\")"
+    ]
+  }
+}

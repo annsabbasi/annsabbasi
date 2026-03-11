@@ -3,32 +3,21 @@ import JobList from "./JobList";
 import "../styles/Experience.css";
 import FadeInSection from "./FadeInSection";
 
-class Experience extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      expanded: true,
-      activeKey: "1",
-    };
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-  handleSelect(eventKey) {
-    this.setState({
-      activeKey: eventKey,
-    });
-  }
-  render() {
-    return (
-      <div id="experience">
+const Experience = () => {
+  return (
+    <div id="experience">
+      <div className="section-wrapper">
         <FadeInSection>
-          <div className="section-header ">
-            <span className="section-title">/ experience</span>
-          </div>
-          <JobList></JobList>
+          <span className="section-label">Work History</span>
+          <h2 className="section-title">Experience</h2>
+          <div className="section-divider" />
+        </FadeInSection>
+        <FadeInSection delay="100ms">
+          <JobList />
         </FadeInSection>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Experience;
