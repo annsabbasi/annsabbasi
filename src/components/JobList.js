@@ -63,7 +63,7 @@ const JobList = () => {
       duration: "Feb 2024 – Present",
       companyUrl: "https://www.algotix.ai/",
       desc: [
-        "Architected and deployed scalable AWS infrastructure (EC2, S3, RDS, CloudWatch), ensuring 96.8% uptime for production applications handling 10,000+ daily active users.",
+        "Architected and deployed scalable AWS infrastructure (EC2, S3, RDS, CloudWatch), ensuring 99.99% uptime for production applications handling 10,000+ daily active users.",
         "Optimized backend services and database queries, achieving 15% performance improvement and reducing average API response time from 800ms to 680ms.",
         "Reduced deployment cycle time by 30% by implementing Docker containerization and GitHub Actions CI/CD pipelines, enabling 3× faster feature releases.",
         "Developed cross-platform mobile applications with React Native using offline-first architecture, improving user retention by 22%.",
