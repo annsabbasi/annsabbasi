@@ -28,8 +28,7 @@ const Intro = ({ theme }) => {
 
             <p className="hero-desc">
               I design and ship production-grade web, mobile, and AI-driven
-              platforms — from real-time systems to agentic AI pipelines —
-              deployed and trusted by thousands of users in live environments.
+              platforms from real-time systems to agentic AI pipelines deployed and trusted by thousands of users in live environments.
             </p>
 
             <div className="hero-cta">

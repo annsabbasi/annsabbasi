@@ -4,11 +4,11 @@ import FadeInSection from "./FadeInSection";
 
 const About = () => {
   const stats = [
-    { number: "3+", label: "Years of Experience" },
+    { number: "3.5+", label: "Years of Experience" },
     { number: "10+", label: "Production Projects" },
     // { number: "100K+",label: "App Downloads" },
     { number: "40%", label: "Sprint Velocity Improved" },
-    { number: "94.5%", label: "On-Time Project Delivery" },
+    { number: "92%", label: "On-Time Project Delivery" },
   ];
 
   const skills = [
@@ -18,23 +18,23 @@ const About = () => {
     },
     {
       label: "Backend",
-      items: ["Node.js", "NestJS", "Python", "Django DRF"],
+      items: ["Node.js", "NestJS", "Python", "FastAPI", "Django DRF"],
     },
     {
       label: "AI & GenAI",
-      items: ["LangChain", "LangGraph", "OpenAI API", "Tavily Search"],
+      items: ["LangChain", "LangGraph", "OpenAI API", "Deepgram", "ElevenLabs"],
     },
     {
       label: "Database & Cache",
-      items: ["PostgreSQL", "Redis", "Supabase", "Drizzle ORM"],
+      items: ["PostgreSQL", "MongoDB", "Redis", "Supabase", "BullMQ", "Drizzle ORM"],
     },
     {
       label: "Cloud & DevOps",
-      items: ["AWS (EC2/S3/RDS)", "Docker", "GCP", "GitHub Actions"],
+      items: ["AWS", "Terraform", "Docker", "GCP", "Nginx", "GitHub Actions"],
     },
     {
-      label: "Desktop & Other",
-      items: ["Electron Js", "Socket.IO", "WebSockets", "tRPC"],
+      label: "APIs & Other",
+      items: ["GraphQL", "Socket.IO", "WebSockets", "tRPC", "Electron Js"],
     },
   ];
 

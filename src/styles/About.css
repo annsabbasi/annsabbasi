@@ -91,6 +91,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  align-items: stretch;
+}
+
+.skills-grid > * {
+  height: 100%;
 }
 
 .skill-group {
@@ -99,6 +104,8 @@
   border-radius: var(--r-md);
   padding: 20px;
   box-shadow: var(--shadow-sm);
+  height: 100%;
+  box-sizing: border-box;
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s,
               background 0.22s;
 }

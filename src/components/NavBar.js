@@ -101,7 +101,7 @@ const NavBar = ({ theme, toggleTheme }) => {
 
             <a
               className="nav-resume"
-              href="https://drive.google.com/file/d/1Xe4-3rhhQqUo1EvucRN7l4nI3imtp2cU/view?usp=sharing"
+              href="https://drive.google.com/file/d/1GvYLYH95eRUugQY9GSYVTzdaJui8B2HB/view?usp=drive_link"
               target="_blank"
               rel="noreferrer"
             >
@@ -153,7 +153,7 @@ const NavBar = ({ theme, toggleTheme }) => {
           </button>
           <a
             className="nav-resume"
-            href="https://docs.google.com/document/d/1v3XJnyn-tOjq5lwHOhU-ojX9j1snUZ1jxG1RSAkrl84/export?format=pdf"
+            href="https://drive.google.com/file/d/1GvYLYH95eRUugQY9GSYVTzdaJui8B2HB/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
             style={{ marginLeft: "auto" }}

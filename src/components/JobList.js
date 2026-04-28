@@ -63,11 +63,12 @@ const JobList = () => {
       duration: "Feb 2024 – Present",
       companyUrl: "https://www.algotix.ai/",
       desc: [
-        "Architected and deployed scalable AWS infrastructure (EC2, S3, RDS, CloudWatch), ensuring 99.99% uptime for production applications handling 10,000+ daily active users.",
+        "Architected and deployed production AWS infrastructure (EC2, S3, RDS, Lambda, CloudFront, CloudWatch, IAM, Route 53) ensuring 99.99% uptime for applications serving 10,000+ daily active users.",
         "Optimized backend services and database queries, achieving 15% performance improvement and reducing average API response time from 800ms to 680ms.",
         "Reduced deployment cycle time by 30% by implementing Docker containerization and GitHub Actions CI/CD pipelines, enabling 3× faster feature releases.",
         "Developed cross-platform mobile applications with React Native using offline-first architecture, improving user retention by 22%.",
-        "Built and integrated AI-powered features using LangChain, LangGraph, and OpenAI API into production systems.",
+        "Established CloudWatch monitoring and alerting systems, reducing incident response time by 40% through proactive issue detection.",
+        "Managed infrastructure-as-code with Terraform, enabling reproducible, version-controlled cloud environments across staging and production.",
       ],
     },
     "Rehman Solutions": {
@@ -78,8 +79,8 @@ const JobList = () => {
         "Led a cross-functional team of 5 developers, implementing agile practices that increased sprint velocity by 40% and improved on-time delivery from 65% to 92%.",
         "Built production-grade mobile applications with real-time Socket.IO synchronization and local-first architecture, reducing data sync conflicts by 85%.",
         "Optimized Google Cloud Run functions and API architecture, improving response times by 25% while reducing monthly cloud costs by 20%.",
-        "Owned primary code review responsibility across full-stack applications, ensuring quality standards before every production deployment.",
-        "Resolved complex performance bottlenecks in React.js, React Native, Node.js, and Nest.js codebases, refactoring legacy code to improve stability.",
+        "Conducted comprehensive code reviews across full-stack codebases (React, React Native, Node.js), eliminating critical defects before production deployments.",
+        "Resolved deep performance bottlenecks through algorithmic optimization and legacy code refactoring, measurably reducing p95 latency across key endpoints.",
       ],
     },
   };
