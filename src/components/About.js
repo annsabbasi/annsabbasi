@@ -11,32 +11,32 @@ const About = () => {
 
   const skills = [
     {
-      label: "Frontend",
-      items: ["React.js", "Next.js", "TypeScript", "React Native", "ElectronJS"],
-    },
-    {
       label: "Backend",
       items: ["Node.js", "NestJS", "Python", "FastAPI", "Django DRF"],
-    },
-    {
-      label: "AI & LLM",
-      items: ["LangChain", "LangGraph", "OpenAI API", "AWS Nova", "RAG Pipelines"],
-    },
-    {
-      label: "Voice & Media",
-      items: ["Deepgram (STT)", "ElevenLabs (TTS)", "AssemblyAI", "Twilio"],
-    },
-    {
-      label: "Database & Cache",
-      items: ["PostgreSQL", "MongoDB", "Redis", "pgvector", "BullMQ", "AWS SQS"],
     },
     {
       label: "Cloud & DevOps",
       items: ["AWS", "Terraform", "Docker", "GCP", "Nginx", "GitHub Actions"],
     },
     {
+      label: "Database & Cache",
+      items: ["PostgreSQL", "MongoDB", "Redis", "pgvector", "BullMQ", "AWS SQS"],
+    },
+    {
       label: "APIs & Auth",
       items: ["GraphQL", "tRPC", "WebSockets", "OAuth 2.0 PKCE", "JWT", "RBAC"],
+    },
+    {
+      label: "AI & LLM",
+      items: ["LangChain", "LangGraph", "OpenAI API", "AWS Nova", "RAG Pipelines"],
+    },
+    {
+      label: "Frontend",
+      items: ["React.js", "Next.js", "TypeScript", "React Native", "ElectronJS"],
+    },
+    {
+      label: "Voice & Media",
+      items: ["Deepgram (STT)", "ElevenLabs (TTS)", "AssemblyAI", "Twilio"],
     },
   ];
 
@@ -54,32 +54,37 @@ const About = () => {
           <div className="about-grid">
             <div className="about-bio">
               <p>
-                I am a <strong>Senior Full-Stack Software Engineer</strong> currently at{" "}
-                <a href="https://www.algotix.ai/" target="_blank" rel="noreferrer">
-                  Algotix AI
+                I am a <strong>Software Engineer II</strong> at{" "}
+                <a href="https://www.provelopers.net/" target="_blank" rel="noreferrer">
+                  Provelopers
                 </a>
-                , where I own the end-to-end design and delivery of distributed,
-                event-driven microservice systems on AWS from architecture through
-                production deployment, monitoring, and incident response. I've delivered
-                measurable results including a 40% reduction in incident detection time
-                and a 30% drop in production regression bugs.
+                , building and maintaining services for a large-scale,
+                multi-tenant ERP platform   with a focus on domain-driven design,
+                API contract design, and cross-system integrations.
               </p>
               <p>
                 Previously at{" "}
+                <a href="https://www.algotix.ai/" target="_blank" rel="noreferrer">
+                  Algotix AI
+                </a>
+                , I grew from Software Engineer to <strong>Senior Software Engineer</strong>,
+                owning the end-to-end design and delivery of distributed, event-driven
+                microservice systems on AWS   from architecture through production
+                deployment, monitoring, and incident response   delivering a 40%
+                reduction in incident detection time and a 30% drop in production
+                regression bugs. Before that, at{" "}
                 <a href="https://www.rahmansolutions.com/" target="_blank" rel="noreferrer">
                   Rehman Solutions
                 </a>
-                , I collaborated in a 5-person engineering team delivering full-stack
-                features using React.js, Node.js, and NestJS contributing to
-                architecture, CI/CD pipelines, and API performance improvements
-                while absorbing best practices across the full engineering lifecycle.
+                , I delivered full-stack features with React.js, Node.js, and NestJS
+                in a 5-person engineering team.
               </p>
               <p>
-                I have a deep interest in <strong>Agentic AI systems</strong> and{" "}
-                <strong>Generative AI</strong> from building autonomous research
-                agents with LangGraph to integrating LLMs and RAG pipelines into
-                production workflows. Currently active in Kubernetes, advanced system
-                design, and agentic LLM workflows.
+                I'm passionate about building reliable, scalable software and
+                continuously exploring <strong>distributed systems</strong>,{" "}
+                <strong>cloud-native architectures</strong>, and modern engineering
+                practices   from event-driven design and production observability
+                to agentic LLM workflows and RAG pipelines.
               </p>
             </div>
 

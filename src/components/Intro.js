@@ -23,11 +23,11 @@ const Intro = ({ theme }) => {
             </h1>
 
             <p className="hero-role">
-              Senior Software Engineer · Cloud &amp; DevOps · AI Systems
+              Software Engineer II · Backend &amp; Distributed Systems
             </p>
 
             <p className="hero-desc">
-              I architect and ship production-grade systems across web, mobile, cloud, and AI from distributed microservices on AWS to agentic LLM pipelines delivering measurable results in real-world, high-scale environments.
+              I design and build reliable, scalable backend systems   from large-scale multi-tenant ERP services and event-driven microservices on AWS to high-performance APIs   with a focus on domain-driven design, cloud architecture, and production observability.
             </p>
 
             <div className="hero-cta">
@@ -69,7 +69,7 @@ const Intro = ({ theme }) => {
                 <EmailRoundedIcon style={{ fontSize: 19 }} />
               </a>
               <div className="hero-social-divider" />
-              <span className="hero-company-tag">@ Algotix AI</span>
+              <span className="hero-company-tag">@ Provelopers</span>
             </div>
           </FadeInSection>
         </div>

@@ -87,6 +87,12 @@
 .MuiTypography-root { font-family: var(--font) !important; }
 
 /* ── Job details ── */
+.joblist-role + .joblist-role {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
 .joblist-job-title {
   font-family: var(--font);
   font-size: 22px;
