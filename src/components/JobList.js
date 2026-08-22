@@ -56,6 +56,35 @@ const useStyles = makeStyles(() => ({
 const JobList = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const rootRef = React.useRef(null);
+
+  // Where the sticky tabs come to rest, below the fixed navbar.
+  const stickyOffset = isHorizontal ? 76 : 88;
+
+  // Panels differ a lot in height. If you're reading deep inside a tall one
+  // and switch to a shorter one, the page shrinks under you and the browser
+  // clamps the scroll position, dropping you into a later section.
+  //
+  // So scroll first, then swap the panel. Doing it in that order means the
+  // document is still tall when we move, so there is nothing to clamp and no
+  // flash of the wrong section. The jump is instant on purpose: animating
+  // would show the trip back up. Because the tabs are sticky at this exact
+  // offset, they stay put on screen and only the content changes.
+  const handleChange = (_, newValue) => {
+    const el = rootRef.current;
+    if (el) {
+      const top = el.getBoundingClientRect().top;
+      if (top < stickyOffset) {
+        // html has scroll-behavior:smooth, so opt out of it for this jump.
+        const html = document.documentElement;
+        const previous = html.style.scrollBehavior;
+        html.style.scrollBehavior = "auto";
+        window.scrollTo(0, window.scrollY + top - stickyOffset);
+        html.style.scrollBehavior = previous;
+      }
+    }
+    setValue(newValue);
+  };
 
   const experienceItems = {
     Provelopers: {
@@ -65,9 +94,11 @@ const JobList = () => {
           jobTitle: "Software Engineer II",
           duration: "Jul 2026 – Present",
           desc: [
-            "Building and maintaining services for a large-scale, multi-tenant ERP platform, applying domain-driven design to keep service boundaries clean, scalable, and maintainable.",
-            "Designing API contracts and cross-system integrations that connect ERP modules with internal and third-party systems.",
-            "Contributing to multi-tenant architecture decisions across tenant isolation, data partitioning, and system integration.",
+            "Build and maintain backend services across SpeedPoint's Docker-orchestrated, multi-repo codebase spanning the customer/admin backend and frontend, ETL services, and supporting services.",
+            "Design and operate Python (Flask + Pandas) ETL pipelines that migrate customer data from Shopmonkey and Tekmetric into the platform's schema, with field mapping, validation, and reconciliation before cutover.",
+            "Trace failures across Traefik routing, container networking, Laravel APIs, and OpenSearch indexing to isolate root cause in a system.",
+            "Ship vertical slices end to end database schema, Laravel APIs, Next.js interfaces, and Python data pipelines so migration and reporting features reach production without hand-off between teams.",
+            "Designed an adapter-based canonical import path normalizes provider data into the platform's schema and reconciles it against source before writing to the OpenSearch index so new providers integrate through a single adapter with no downstream changes.",
           ],
         },
       ],
@@ -79,23 +110,22 @@ const JobList = () => {
           jobTitle: "Senior Software Engineer",
           duration: "Oct 2025 – Jul 2026",
           desc: [
-            "Architected asynchronous processing pipelines using BullMQ and AWS SQS, enabling the platform to handle high-concurrency workloads reliably with automatic retry logic, dead-letter queues, and horizontal worker scaling.",
-            "Led infrastructure modernization initiative: migrated key services to containerized ECS deployments with Terraform-managed IaC, achieving reproducible environment provisioning across staging and production and eliminating configuration drift.",
-            "Owned end-to-end design and delivery of distributed, event-driven microservice systems on AWS from initial architecture through production deployment, monitoring, and incident response.",
-            "Established full observability stack CloudWatch custom metrics, distributed tracing, structured logging, and automated alerting reducing mean time to detection (MTTD) of production incidents by 40%.",
-            "Drove technical decisions in cross-functional Agile sprints: conducted architectural reviews, led code reviews for the team, defined API contracts, and enforced SLA compliance across critical services.",
-            "Introduced API contract testing and integration test coverage, reducing production regression bugs by 30% across quarterly releases.",
+            "Architected asynchronous processing pipelines on BullMQ and AWS SQS with retry/backoff, dead-letter queues, and horizontal worker scaling, sustaining and maintaining without message loss.",
+            "Led migration of core services to containerized AWS ECS deployments managed with Terraform, replacing manual provisioning with reproducible staging and production environments and eliminating configuration drift.",
+            "Built production observability from scratch CloudWatch custom metrics, distributed tracing, structured logging, and automated alerting cutting mean time to detection for incidents by 40%.",
+            "Drive technical decisions in cross-functional Agile sprints: conduct architectural reviews, lead code reviews for the team, define API contracts, and enforce SLA compliance across critical services.",
+            "Introduced API contract and integration testing, reducing production regression bugs by 30% across quarterly releases.",
           ],
         },
         {
           jobTitle: "Software Engineer",
-          duration: "Mar 2024 – Oct 2025",
+          duration: "Feb 2024 – Oct 2025",
           desc: [
-            "Built and maintained production-grade backend services supporting large-scale customer engagement platforms, handling live traffic, debugging production issues, and shipping features with strict reliability requirements.",
-            "Developed offline-first React Native mobile features using local-first architecture and sync logic, improving user retention by 22% and eliminating data-loss complaints reported by the client.",
-            "Established CloudWatch monitoring and alerting for key backend services, creating the first observability setup in the team's workflow and reducing incident response time by 40% through early anomaly detection.",
-            "Documented undocumented internal services and API contracts, reducing onboarding time for new team members and improving cross-team debugging efficiency.",
-            "Delivered features reliably sprint after sprint with minimal rework, maintaining a track record of clean QA handoffs and zero critical rollbacks during tenure in this role.",
+            "Built and operated production backend services for a high-traffic customer engagement platform owning feature delivery live-traffic debugging and incident triage under strict reliability requirements.",
+            "Built offline-first React Native features on a local-first architecture with conflict-aware sync eliminating client reported data loss and lifting user retention 22%.",
+            "Stood up the team's first observability layer CloudWatch metrics and alerting across core backend services surfacing anomalies before user impact and shortening incident response.",
+            "Reverse-engineered and documented undocumented internal services and API contracts cutting new engineer onboarding time and giving adjacent teams a reference for cross-service debugging.",
+            "Introduced Redis-backed BullMQ job processing to move long-running work off the request path laying the groundwork for the queue architecture later scaled across services.",
           ],
         },
       ],
@@ -107,12 +137,12 @@ const JobList = () => {
           jobTitle: "Full-Stack Software Engineer",
           duration: "Sep 2022 – Feb 2024",
           desc: [
-            "Delivered full-stack features across client-facing products using React.js, Node.js, and NestJS; collaborated in a 5-person engineering team and contributed to architecture and technical direction.",
+            "Delivered full-stack features on client-facing products in React.js, Node.js, and NestJS as one of 5 engineers contributing to technical direction as scope grew.",
             "Proactively learned and applied CI/CD practices contributed to pipeline improvements using GitHub Actions that reduced manual deployment steps and release friction for the team.",
             "Identified and fixed several API performance issues through query optimization and code refactoring improvements were noticed by senior engineers and led to more responsibility over time.",
             "Optimized GCP Cloud Run services through query optimization, Redis caching, and service right-sizing for faster responses.",
             "Collaborated closely with senior engineers and absorbed best practices in code structure, Git workflows, and REST API design applying learnings to every feature built.",
-            "Established code quality standards linting, pre-commit hooks, unit test coverage thresholds and contributed to internal onboarding documentation adopted across the team.",
+            "Established code quality standards linting, pre-commit hooks, unit test coverage thresholds and authored onboarding documentation adopted across the team.",
           ],
         },
       ],
@@ -120,12 +150,12 @@ const JobList = () => {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} ref={rootRef}>
       <Tabs
         orientation={isHorizontal ? "horizontal" : "vertical"}
         variant={isHorizontal ? "fullWidth" : "scrollable"}
         value={value}
-        onChange={(_, v) => setValue(v)}
+        onChange={handleChange}
         className={classes.tabs}
       >
         {Object.keys(experienceItems).map((key, i) => (

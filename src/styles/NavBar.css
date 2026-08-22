@@ -252,7 +252,7 @@
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .nav-links,
-  .nav-resume {
+  .nav-inner .nav-resume {
     display: none;
   }
 

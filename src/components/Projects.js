@@ -56,36 +56,6 @@ class Projects extends React.Component {
         flip: false,
       },
       {
-        title: "SocialsBoost",
-        desc:
-          "A multi-tenant social media management platform serving marketing teams globally. Features multi-platform post scheduling and an AI content studio powered by OpenAI that generates captions, hashtags, and image concepts reducing content creation time by 7×. Implemented OAuth 2.0 PKCE authentication from scratch across 5+ social platforms, eliminating implicit grant vulnerabilities. Deployed on AWS (ECS, RDS, S3, CloudFront) with Terraform and Docker, achieving 99.9% uptime SLA.",
-        techStack: [
-          "React.js",
-          "Nest.js",
-          "Twitter API / OAuth 2.0 PKCE",
-          "Meta API",
-          "LinkedIn API",
-          "OpenAI",
-          "Terraform",
-          "Docker",
-          "AWS",
-          "Vitest",
-        ],
-        github: null,
-        live: "https://www.socialsboost.tech/",
-        images: [
-          "/assets/jolt/home-page.png",
-          "/assets/jolt/dashboard.png",
-          "/assets/jolt/create-post.png",
-          "/assets/jolt/analytics.png",
-          "/assets/jolt/ai-content.png",
-          "/assets/jolt/schedule-post.png",
-          "/assets/jolt/social-account.png",
-          "/assets/jolt/profile.png",
-        ],
-        flip: true,
-      },
-      {
         title: "Merit Tracker",
         desc:
           "An enterprise workforce management platform with multi-role access (Company, QC Admin, User, Super Admin). Companies manage departments, projects, and tasks while monitoring employee productivity via a cross-platform Electron desktop app for Windows, Mac, and Linux. QC admins review and approve deliverables with notes, and a super admin controls subscriptions and platform access.",
@@ -111,11 +81,17 @@ class Projects extends React.Component {
           "/assets/merit-tracker/my-task.png",
           "/assets/merit-tracker/company-setting.png",
         ],
-        flip: false,
+        flip: true,
       },
     ];
 
     const otherProjects = [
+      {
+        title: "SpeedPoint ERP",
+        desc: "Multi-tenant ERP platform. Python ETL services (Pandas, Flask) migrate customers, vehicles, work-order history, inventory catalogs, canned services, and pricing rules from Shopmonkey and Tekmetric into SpeedPoint's canonical schema, with field mapping, validation, and reconciliation gates before cutover. An adapter-based canonical import path lets new providers integrate through a single adapter with no downstream changes, and tenant-scoped querying over an OpenSearch-backed search layer enforces strict per-tenant result isolation as the index grows.",
+        tech: "Laravel · Next.js · Python · Pandas · OpenSearch · Traefik · Docker · PostgreSQL",
+        live: "https://getspeedpoint.com",
+      },
       {
         title: "SocialsBoost",
         desc: "Multi-tenant social media platform serving marketing teams globally. AI content studio (OpenAI) generates captions, hashtags, and image concepts cutting content creation time by 7×. OAuth 2.0 PKCE auth across 5+ platforms, multi-platform scheduling, deployed on AWS with Terraform and Docker achieving 99.9% uptime.",
@@ -131,14 +107,14 @@ class Projects extends React.Component {
       },
       {
         title: "FrontDeskPro",
-        desc: "Conversational AI agent handling calls at sub-200ms latency, cutting human agent workload. Integrates ElevenLabs, Twilio, Deepgram, and AWS Nova APIs 90% intent recognition accuracy. Async job queue architecture routes email workflows, significantly improving throughput.",
+        desc: "Production voice agent handling calls at sub-200ms latency, cutting human agent workload. Integrates ElevenLabs, Twilio, Deepgram, and AWS Nova APIs at 90% intent recognition accuracy, with a structured transcription pipeline synced to CRM through webhooks. Moving voice processing off the request path onto a BullMQ queue cut API p95 response time by 65%; timeout and fallback paths escalate degraded calls cleanly to a human instead of failing silently.",
         tech: "NestJS · Next.js · ElevenLabs · Twilio · Deepgram · AWS Nova · PostgreSQL",
         // github: "https://github.com/annsabbasi",
         live: "https://frontdeskpro.ai",
       },
       {
         title: "TryLeo",
-        desc: "Document digitization platform reduced processing time from 5 min to 45 sec via BullMQ job queues and parallel OCR/NLP workers. Supabase + pgvector search improved retrieval speed by 70% and accuracy to 94%.",
+        desc: "Document digitization platform reduced per-document processing from 5 min to 45 sec by parallelizing OCR and NLP page-by-page across concurrent BullMQ workers. Hybrid semantic and full-text search on Supabase PostgreSQL with pgvector and OpenAI embeddings improved retrieval latency 70% over the prior full-text-only implementation. Multi-format ingestion (PDF, DOCX, images) with structured extraction, entity recognition, and auto-tagging feeds downstream workflow automation.",
         tech: "Next.js · Python · Supabase · pgvector · Redis · BullMQ · OpenAI API",
         // github: "https://github.com/annsabbasi",
         live: "http://tryleo.ai",
@@ -150,13 +126,6 @@ class Projects extends React.Component {
         github: "https://github.com/midday-ai/midday",
         live: "https://midday.ai",
       },
-      {
-        title: "CatchACharacter",
-        desc: "Augmented reality photo & sticker application with advanced image overlay features. Achieved 100K+ downloads on Google Play.",
-        tech: "React Native · AR Libraries · Image Processing",
-        // github: "https://github.com/annsabbasi",
-        live: "https://play.google.com/store/apps/details?id=com.catchacharacter.android",
-      },
     ];
 
     return (
@@ -165,7 +134,7 @@ class Projects extends React.Component {
           {/* ── Section header ── */}
           <FadeInSection>
             <span className="section-label">Featured Work</span>
-            <h2 className="section-title">Pet Projects</h2>
+            <h2 className="section-title">Selected Projects</h2>
             <div className="section-divider" />
           </FadeInSection>
 

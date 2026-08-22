@@ -4,6 +4,9 @@ import FadeInSection from "./FadeInSection";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
+import SchoolRoundedIcon from "@material-ui/icons/SchoolRounded";
+import CloudRoundedIcon from "@material-ui/icons/CloudRounded";
+import TranslateRoundedIcon from "@material-ui/icons/TranslateRounded";
 
 const Credits = () => {
   return (
@@ -20,7 +23,7 @@ const Credits = () => {
             <p className="contact-sub">
               I'm always open to new opportunities, interesting projects, and
               great conversations. Whether you have a role, a project, or just
-              want to say hello my inbox is open.
+              want to say hello, my inbox is open.
             </p>
 
             <a
@@ -50,22 +53,40 @@ const Credits = () => {
                 <LinkedInIcon style={{ fontSize: 17 }} />
                 LinkedIn
               </a>
-              <a
-                className="contact-social-link"
-                href="https://www.udemy.com/certificate/UC-1bd310cf-435d-41ff-86c9-81f4cbc17786/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                🎓 Udemy Certificate
-              </a>
-              <a
-                className="contact-social-link"
-                href="https://drive.google.com/file/d/1fU285k5dEhJ29CyTKEdqBJeAnv6lYXC_/view?usp=drive_link"
-                target="_blank"
-                rel="noreferrer"
-              >
-                🏅 LanguageCert B2
-              </a>
+            </div>
+
+            {/* Certifications, visually separated from the social links above */}
+            <div className="contact-certs">
+              <span className="contact-certs-label">Certifications</span>
+              <div className="contact-certs-list">
+                <a
+                  className="contact-cert-link"
+                  href="https://www.udemy.com/certificate/UC-1bd310cf-435d-41ff-86c9-81f4cbc17786/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <SchoolRoundedIcon style={{ fontSize: 16 }} />
+                  Generative &amp; Agentic AI
+                </a>
+                <a
+                  className="contact-cert-link"
+                  href="https://www.udemy.com/certificate/UC-dd1389d0-b8ee-4c10-9f13-04d8603f0e61/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <CloudRoundedIcon style={{ fontSize: 16 }} />
+                  AWS Cloud Architecture
+                </a>
+                <a
+                  className="contact-cert-link"
+                  href="https://drive.google.com/file/d/1fU285k5dEhJ29CyTKEdqBJeAnv6lYXC_/view?usp=drive_link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <TranslateRoundedIcon style={{ fontSize: 16 }} />
+                  LanguageCert B2
+                </a>
+              </div>
             </div>
           </div>
         </FadeInSection>

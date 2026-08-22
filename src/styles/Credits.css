@@ -96,6 +96,65 @@
   transform: translateY(-1px);
 }
 
+/* ── Certifications ──
+   Deliberately lighter than the social links above: no surface fill,
+   dashed border and a small caption, so the two groups don't read alike. */
+.contact-certs {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+  transition: border-color 0.22s;
+}
+
+.contact-certs-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  transition: color 0.22s;
+}
+
+.contact-certs-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-cert-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  font-family: var(--font);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-3) !important;
+  border: 1px dashed var(--border);
+  border-radius: 999px;
+  background: transparent;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.contact-cert-link svg {
+  color: var(--accent);
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+
+.contact-cert-link:hover {
+  color: var(--accent) !important;
+  border-color: var(--border-accent);
+  background: var(--green-tint);
+}
+
+.contact-cert-link:hover svg { opacity: 1; }
+
 /* ── Footer bar ── */
 .footer-bar {
   border-top: 1px solid var(--border);

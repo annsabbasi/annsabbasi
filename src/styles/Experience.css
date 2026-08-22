@@ -76,6 +76,17 @@
   border-bottom-color: var(--accent) !important;
 }
 
+/* Keep the company tabs in view while reading long bullet lists.
+   align-self stops the flex parent stretching the column to full height,
+   which would leave sticky nothing to travel through. */
+@media (min-width: 601px) {
+  .MuiTabs-root {
+    position: sticky;
+    top: 88px;
+    align-self: flex-start;
+  }
+}
+
 /* Tab panel content */
 #vertical-tabpanel {
   padding-left: 40px !important;
@@ -169,6 +180,13 @@ ul {
   .makeStyles-root-1 {
     height: unset !important;
     flex-direction: column;
+  }
+  /* Horizontal tab bar sticks below the fixed navbar */
+  .MuiTabs-root {
+    position: sticky;
+    top: 68px;
+    z-index: 2;
+    background: var(--bg);
   }
   #vertical-tabpanel {
     padding-left: 0 !important;

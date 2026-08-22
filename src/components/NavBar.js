@@ -6,6 +6,21 @@ import Brightness4Icon from "@material-ui/icons/Brightness4";   // moon
 import Brightness7Icon from "@material-ui/icons/Brightness7";   // sun
 import "../styles/NavBar.css";
 
+// Pre-filled "request resume" email built once at module load
+const RESUME_MAILTO =
+  "mailto:annsabbasi54@gmail.com?subject=" +
+  encodeURIComponent("Resume Request - Anns Abbasi") +
+  "&body=" +
+  encodeURIComponent(
+    "Hi Anns,\n\n" +
+      "I came across your portfolio and would love to take a look at your resume. " +
+      "Could you share a copy?\n\n" +
+      "Name: \n" +
+      "Company: \n" +
+      "Role / opportunity: \n\n" +
+      "Thanks!"
+  );
+
 const NavBar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -101,11 +116,10 @@ const NavBar = ({ theme, toggleTheme }) => {
 
             <a
               className="nav-resume"
-              href="https://drive.google.com/file/d/1GvYLYH95eRUugQY9GSYVTzdaJui8B2HB/view?usp=drive_link"
-              target="_blank"
-              rel="noreferrer"
+              href={RESUME_MAILTO}
+              title="Email me to request my resume"
             >
-              Resume ↗
+              Request Resume
             </a>
 
             {/* Hamburger */}
@@ -153,12 +167,11 @@ const NavBar = ({ theme, toggleTheme }) => {
           </button>
           <a
             className="nav-resume"
-            href="https://drive.google.com/file/d/1GvYLYH95eRUugQY9GSYVTzdaJui8B2HB/view?usp=drive_link"
-            target="_blank"
-            rel="noreferrer"
+            href={RESUME_MAILTO}
+            title="Email me to request my resume"
             style={{ marginLeft: "auto" }}
           >
-            Resume ↗
+            Request Resume
           </a>
         </div>
       </div>

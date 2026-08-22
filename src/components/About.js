@@ -5,34 +5,43 @@ import FadeInSection from "./FadeInSection";
 const About = () => {
   const stats = [
     { number: "10+", label: "Production Projects" },
-    { number: "40%", label: "Faster Incident Detection" },
+    { number: "25%", label: "API Performance Gain" },
+    { number: "30%", label: "Cloud Cost Reduction" },
     { number: "6×", label: "Doc Processing Speed" },
   ];
 
   const skills = [
     {
+      label: "Languages",
+      items: ["JavaScript (ES6+)", "TypeScript", "Python", "PHP", "SQL", "Bash"],
+    },
+    {
       label: "Backend",
-      items: ["Node.js", "NestJS", "Python", "FastAPI", "Django DRF"],
+      items: ["Node.js", "NestJS", "Express.js", "FastAPI", "Django DRF", "Flask", "Laravel"],
+    },
+    {
+      label: "Frontend",
+      items: ["React.js", "Next.js", "React Native", "ElectronJS", "Tailwind CSS"],
     },
     {
       label: "Cloud & DevOps",
-      items: ["AWS", "Terraform", "Docker", "GCP", "Nginx", "GitHub Actions"],
+      items: ["AWS", "GCP", "Terraform", "Docker", "Traefik", "Nginx", "GitHub Actions", "Fly.io"],
     },
     {
-      label: "Database & Cache",
-      items: ["PostgreSQL", "MongoDB", "Redis", "pgvector", "BullMQ", "AWS SQS"],
+      label: "Data & Search",
+      items: ["PostgreSQL", "MySQL", "MongoDB", "Cassandra", "OpenSearch", "pgvector", "Pandas ETL"],
+    },
+    {
+      label: "Queues & Async",
+      items: ["BullMQ", "AWS SQS", "AWS SNS", "Redis", "Retry & Backoff", "Dead-Letter Queues"],
     },
     {
       label: "APIs & Auth",
-      items: ["GraphQL", "tRPC", "WebSockets", "OAuth 2.0 PKCE", "JWT", "RBAC"],
+      items: ["GraphQL", "tRPC", "WebSockets", "OAuth 2.0 PKCE", "OIDC", "JWT", "RBAC"],
     },
     {
       label: "AI & LLM",
       items: ["LangChain", "LangGraph", "OpenAI API", "AWS Nova", "RAG Pipelines"],
-    },
-    {
-      label: "Frontend",
-      items: ["React.js", "Next.js", "TypeScript", "React Native", "ElectronJS"],
     },
     {
       label: "Voice & Media",
@@ -58,9 +67,14 @@ const About = () => {
                 <a href="https://www.provelopers.net/" target="_blank" rel="noreferrer">
                   Provelopers
                 </a>
-                , building and maintaining services for a large-scale,
-                multi-tenant ERP platform   with a focus on domain-driven design,
-                API contract design, and cross-system integrations.
+                , building and maintaining backend services for SpeedPoint, a
+                large-scale multi-tenant ERP platform. I design and operate
+                Python (Flask + Pandas) ETL pipelines that migrate customer data
+                from third-party providers into the platform's canonical schema,
+                and ship vertical slices end to end across a Docker-orchestrated,
+                multi-repo codebase: database schema, Laravel APIs, Next.js
+                interfaces, and data pipelines, fronted by Traefik and backed by
+                OpenSearch.
               </p>
               <p>
                 Previously at{" "}
@@ -69,8 +83,8 @@ const About = () => {
                 </a>
                 , I grew from Software Engineer to <strong>Senior Software Engineer</strong>,
                 owning the end-to-end design and delivery of distributed, event-driven
-                microservice systems on AWS   from architecture through production
-                deployment, monitoring, and incident response   delivering a 40%
+                microservice systems on AWS, from architecture through production
+                deployment, monitoring, and incident response, delivering a 40%
                 reduction in incident detection time and a 30% drop in production
                 regression bugs. Before that, at{" "}
                 <a href="https://www.rahmansolutions.com/" target="_blank" rel="noreferrer">
@@ -83,8 +97,9 @@ const About = () => {
                 I'm passionate about building reliable, scalable software and
                 continuously exploring <strong>distributed systems</strong>,{" "}
                 <strong>cloud-native architectures</strong>, and modern engineering
-                practices   from event-driven design and production observability
-                to agentic LLM workflows and RAG pipelines.
+                practices, from event-driven design and production observability
+                to agentic LLM workflows and RAG pipelines. I hold a BS in
+                Computer Science from Islamia University of Bahawalpur.
               </p>
             </div>
 

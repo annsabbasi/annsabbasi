@@ -23,11 +23,11 @@ const Intro = ({ theme }) => {
             </h1>
 
             <p className="hero-role">
-              Software Engineer II · Backend &amp; Distributed Systems
+              Software Engineer II at Provelopers · Backend &amp; Distributed Systems
             </p>
 
             <p className="hero-desc">
-              I design and build reliable, scalable backend systems   from large-scale multi-tenant ERP services and event-driven microservices on AWS to high-performance APIs   with a focus on domain-driven design, cloud architecture, and production observability.
+              I design and build reliable, scalable backend systems, from enterprise multi-tenant platforms and high-throughput data pipelines to event-driven microservices on AWS, with a focus on domain-driven design, cloud architecture, and production observability.
             </p>
 
             <div className="hero-cta">
